@@ -1,0 +1,70 @@
+/* Conscious Humans Studio — shared styles. Colours follow the Streak Rewards design system v6. */
+:root {
+  --page: #ffffff;
+  --surface: #ffffff;
+  --sunken: #f4f4f4;
+  --border: #ebebeb;
+  --ink: #1f1f1f;
+  --ink-soft: #6b6b6b;
+  --green: #15803d;
+  --green-ink: #166534;
+  --green-soft: #dcf1e2;
+  --shadow: 3px 3px 6px rgba(0, 0, 0, 0.09), 12px 12px 40px -6px rgba(0, 0, 0, 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #121212;
+    --surface: #222222;
+    --sunken: #181818;
+    --border: #333333;
+    --ink: #ededed;
+    --ink-soft: #a3a3a3;
+    --green: #5bcb82;
+    --green-ink: #5bcb82;
+    --green-soft: #183322;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header.site { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+header.site a.brand { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 17px; }
+nav.links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+nav.links a { color: var(--ink-soft); text-decoration: none; }
+nav.links a[aria-current="page"], nav.links a:hover { color: var(--green-ink); }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.4px; }
+h2 { font-size: 20px; line-height: 1.35; margin: 36px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 6px; }
+p, li { color: var(--ink); }
+.muted { color: var(--ink-soft); font-size: 14px; }
+a { color: var(--green-ink); }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+.card h2:first-child, .card h3:first-child { margin-top: 0; }
+.pill { display: inline-block; margin-bottom: 12px; background: var(--green-soft); color: var(--green-ink); border-radius: 999px; padding: 2px 12px; font-size: 13px; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 20px 0; }
+.grid .card { margin: 0; }
+.grid a.card { display: block; color: var(--ink); text-decoration: none; }
+.grid a.card strong { display: block; margin-bottom: 4px; }
+.grid a.card span { color: var(--ink-soft); font-size: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 12px 0; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+th { color: var(--ink-soft); font-weight: 600; font-size: 13px; }
+.table-scroll { overflow-x: auto; }
+footer.site { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--ink-soft); font-size: 14px; }
+footer.site a { color: var(--ink-soft); }
